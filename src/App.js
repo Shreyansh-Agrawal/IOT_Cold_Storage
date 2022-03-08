@@ -1,6 +1,5 @@
 import React, { Component, useEffect } from "react";
 import "./App.css";
-
 import About from "./components/Homepage/About";
 import Carousel from "./components/Homepage/Carousel";
 import Features from "./components/Homepage/Features";
@@ -13,8 +12,6 @@ import Table from "./components/ProjectView/Table";
 
 import Amplify, { PubSub } from "aws-amplify";
 import { AWSIoTProvider } from "@aws-amplify/pubsub/lib/Providers";
-
-import StaticMap from "./components/Maps/Map";
 
 Amplify.configure({
   Auth: {

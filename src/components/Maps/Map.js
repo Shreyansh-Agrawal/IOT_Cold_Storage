@@ -1,57 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
+import {
+  GoogleMap,
+  useLoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 
-import L from "leaflet";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import osm from "./osm-providers";
-import "./index.css";
-
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-icon.png",
-  iconUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-icon.png",
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-shadow.png",
-});
-
-const marker = { lat: 24.4539, lng: 54.3773 };
-
-const interactionOptions = {
-  zoomControl: false,
-  doubleClickZoom: false,
-  closePopupOnClick: false,
-  dragging: false,
-  zoomSnap: false,
-  zoomDelta: false,
-  trackResize: false,
-  touchZoom: false,
-  scrollWheelZoom: false,
+const libraries = ["places"];
+const mapContainerStyle = {
+  width: "100wh",
+  height: "40vh",
+};
+const center = {
+  lat: 23.0225,
+  lng: 72.5714,
+};
+const options = {
+  disableDefaultUI: true,
 };
 
-const StaticMap = () => {
+export default function Map() {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries,
+  });
+
+  if (loadError) return "Error loading maps";
+  if (!isLoaded) return "Loading Maps";
+
   return (
-    <>
-      <div className="row">
-        <div className="col text-center">
-          <h2>React-leaflet - Showing static map with marker</h2>
-
-          <div className="col">
-            <MapContainer
-              center={marker}
-              zoom={12}
-              className="static-map"
-              {...interactionOptions}
-            >
-              <TileLayer url={osm.maptiler.url} />
-              <Marker position={[marker.lat, marker.lng]}></Marker>
-            </MapContainer>
-          </div>
-        </div>
-      </div>
-    </>
+    <div>
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        zoom={15}
+        center={center}
+        options={options}
+      >
+        <Marker position={center} />
+      </GoogleMap>
+    </div>
   );
-};
-
-export default StaticMap;
+}

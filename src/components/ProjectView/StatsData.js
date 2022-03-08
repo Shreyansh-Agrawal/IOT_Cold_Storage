@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './projectview.css'
 // import { Line } from 'react-chartjs-2';
-
+import Map from '../Maps/Map'
 export default class Stats_data extends Component {
     // constructor(props) {
     //     super(props);
@@ -101,14 +101,10 @@ export default class Stats_data extends Component {
                                 <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-temperature-smart-home-system-inipagistudio-mixed-inipagistudio.png" />
                                 <span className="card-title fs-4 fw-bold pl-3">GPS Location</span>
                                 <div className="mapouter pt-4" style={{ overflow: "hidden", width: "100%" }}>
-                                    <div className="gmap_canvas">
-                                        <iframe title="map" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-                                    </div>
+                                        <Map/>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
