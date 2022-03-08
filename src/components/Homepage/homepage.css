@@ -1,0 +1,149 @@
+/* transparent navbar */
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #1C2331!important;
+    }
+  }
+  
+  .view, body, html {
+    height: 100%;
+  }
+  
+  .navbar {
+    background-color: rgba(0, 0, 0, 0)
+  }
+  
+  .page-footer, .top-nav-collapse {
+    background-color: #001233
+  }
+  
+  @media only screen and (max-width:768px) {
+    .navbar {
+        background-color: #001233
+    }
+  }
+  
+/* Carousel */
+.carousel-item{
+    -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.carousel-txt-overlay{
+    position: absolute;
+    left: 36%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+}
+
+
+/* Statistics */
+.stats{
+  position: absolute;
+  margin-top: -100px;   
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.card-title-counter{
+  font-size: 40px;
+}
+
+/* About us */
+/* .about{
+  background-color: #f7f7f7;
+  padding-bottom: 120px;
+} */
+.about-us{
+  margin-top: 50px;
+}
+.about-img{
+  position: absolute;
+  z-index: 10;
+  height: 360px;
+  width: 360px;
+  margin-top: -16px;
+  border-radius: 16px;
+ 
+}
+.about-txt{
+  background-color: #0353A4;
+  width: 880px;
+  height: 360px;
+  z-index: 10;
+  padding: 40px;
+  margin-left: auto;
+  padding-left: 160px;
+  border-radius: 16px
+}
+.custom-button {
+  height: 56px;
+  border-radius: 50px;
+  border: none;
+  background-color: #7D8597;
+  padding: 0 24px;
+  color: #ffffff;
+  align-self: center;
+}
+
+/* Features */
+.features_bg{
+  padding: 120px 0;
+  margin-top: 120px;
+  background-color: #023E7D;
+  /* height: 1171px; */
+}
+
+
+.card-features{
+  border: 0 !important;
+}
+.card-features-title{
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.card-features-body{
+  background-color: #023E7D;
+}
+
+.card-features-text{
+  font-weight: 300;
+  font-size: 24px;
+  color: #979DAC;
+}
+  .reason_grid{
+    padding-right: 60px;
+  }
+
+.line1{
+  border-right: 2px solid #959595;
+  border-bottom: 2px solid #959595;
+  height: 400px;
+}
+.line2{
+  border-bottom: 2px solid #959595;
+}
+.line3{
+  border-right: 2px solid #959595;
+  height: 400px;
+}
+.line4{
+  border:none;
+}
+
+/* Contact */
+
+.sendbtn{
+  width: 100%;
+}
