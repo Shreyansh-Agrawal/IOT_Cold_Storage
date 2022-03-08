@@ -28,16 +28,45 @@ Amplify.addPluggable(
   })
 );
 
-Amplify.PubSub.subscribe("esp32/counter").subscribe({
-  next: (data) => console.log("Message received", data),
-  error: (error) => console.error(error),
-  close: () => console.log("Done"),
-});
+// Amplify.PubSub.subscribe("esp32/counter").subscribe({
+//   next: (data) => console.log("Message received", data),
+//   error: (error) => console.error(error),
+//   close: () => console.log("Done"),
+// });
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sensorMsg: '',
+    };
+  }
+  componentDidMount() {
+    Amplify.PubSub.subscribe("esp32/pub").subscribe({
+      next: (data) => {
+        try {
+          this.setState({ sensorMsg: data.value });
+        } catch (error) {
+          console.log("Error, are you sending the correct data?");
+        }
+      },
+      error: (error) => console.error(error),
+      close: () => console.log("Done"),
+    });
+  }
+
   render() {
     console.log(process.env);
+    console.log(this.state.sensorMsg)
+    console.log(this.state.sensorMsg.AirTemp)
+    console.log(this.state.sensorMsg.Humidity)
+
     return (
       <div className="App">
+              <p>{this.state.sensorMsg.humidity}</p>
+        <p>{this.state.sensorMsg.temprature}</p>
+        <p>{this.state.sensorMsg.longitude}</p>
+        <p>{this.state.sensorMsg.latitude}</p>
+
         <Header />
         <Carousel />
         <Statistics />
