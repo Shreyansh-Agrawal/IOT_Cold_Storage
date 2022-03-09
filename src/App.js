@@ -10,6 +10,8 @@ import Footer from "./components/Homepage/Footer";
 import StatsData from "./components/ProjectView/StatsData";
 import Table from "./components/ProjectView/Table";
 
+import Sensors from "./components/sensorData";
+
 import Amplify, { PubSub } from "aws-amplify";
 import { AWSIoTProvider } from "@aws-amplify/pubsub/lib/Providers";
 
@@ -33,6 +35,7 @@ Amplify.addPluggable(
 //   error: (error) => console.error(error),
 //   close: () => console.log("Done"),
 // });
+let lat = <Sensors name="latitude"/>
 class App extends Component {
   constructor(props) {
     super(props);
@@ -55,17 +58,19 @@ class App extends Component {
   }
 
   render() {
-    console.log(process.env);
-    console.log(this.state.sensorMsg)
-    console.log(this.state.sensorMsg.AirTemp)
-    console.log(this.state.sensorMsg.Humidity)
+   // console.log(process.env);
+   //console.log(this.state.sensorMsg)
+    console.log(this.state.sensorMsg.temprature)
+    console.log(this.state.sensorMsg.humidity)
+    console.log(lat)
 
     return (
       <div className="App">
-              <p>{this.state.sensorMsg.humidity}</p>
+      {lat}
+        {/* <p>{this.state.sensorMsg.humidity}</p>
         <p>{this.state.sensorMsg.temprature}</p>
         <p>{this.state.sensorMsg.longitude}</p>
-        <p>{this.state.sensorMsg.latitude}</p>
+        <p>{this.state.sensorMsg.latitude}</p> */}
 
         <Header />
         <Carousel />

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {
   GoogleMap,
   useLoadScript,
@@ -6,15 +6,25 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 
+import Sensors from "../sensorData";
+
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "100wh",
   height: "40vh",
 };
+// let lat1= 23
+// let lng1 = 74
+let lat1= <Sensors name="latitude"/>
+let lng1 = <Sensors name="longitude"/>
+console.log(lat1)
 const center = {
-  lat: 23.0225,
-  lng: 72.5714,
+  lat: 24,
+  lng: 74
 };
+// useEffect(()=>{
+//   center()
+// })
 const options = {
   disableDefaultUI: true,
 };
@@ -30,13 +40,14 @@ export default function Map() {
 
   return (
     <div>
+    {lat1}{lng1}
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={15}
         center={center}
         options={options}
       >
-        <Marker position={center} />
+        <Marker position={center}/>
       </GoogleMap>
     </div>
   );
