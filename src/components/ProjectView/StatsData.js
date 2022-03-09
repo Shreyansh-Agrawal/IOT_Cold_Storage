@@ -28,7 +28,7 @@ export default class Stats_data extends Component {
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Temperature</span>
                                 <div className="py-3">
-                                <Sensors name="temprature" unit="°F"/>
+                                <Sensors name="temprature" unit=" °C"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
@@ -55,7 +55,7 @@ export default class Stats_data extends Component {
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Humidity</span>
                                 <div className="py-3">
-                                <Sensors name="humidity" unit="%"/>
+                                <Sensors name="humidity" unit=" %"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
@@ -78,7 +78,8 @@ export default class Stats_data extends Component {
                             <div className="card-body">
                                 <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-temperature-smart-home-system-inipagistudio-mixed-inipagistudio.png" />
                                 <span className="card-title pl-3 fs-4 fw-bold">Air Quality</span>
-                                <div className="py-3">Air!
+                                <div className="py-3">
+                                <Sensors name="ppm" unit=" ppm"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
