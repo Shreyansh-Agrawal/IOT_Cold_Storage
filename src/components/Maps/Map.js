@@ -19,8 +19,8 @@ let lat1= <Sensors name="latitude" unit="°N"/>
 let lng1 = <Sensors name="longitude" unit="°E"/>
 // console.log(lat1)
 const center = {
-  lat: 24,
-  lng: 74
+  lat: 23.03878933340803,
+  lng: 72.4703251980492
 };
 // useEffect(()=>{
 //   center()

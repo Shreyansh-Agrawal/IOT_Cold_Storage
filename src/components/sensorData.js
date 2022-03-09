@@ -25,7 +25,7 @@ class Sensors extends Component {
     };
   }
   componentDidMount() {
-    Amplify.PubSub.subscribe("esp32/counter").subscribe({
+    Amplify.PubSub.subscribe("esp32/pub").subscribe({
       next: (data) => {
         try {
           this.setState({ sensorMsg: data.value });
