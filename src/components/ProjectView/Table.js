@@ -1,100 +1,103 @@
 import React, { Component } from 'react';
-import { MDBDataTable } from 'mdbreact';
+import { MDBBtn, MDBDataTable, MDBTable} from 'mdbreact';
 
 const DatatablePage = () => {
     const data = {
         columns: [
             {
-                label: 'Name',
-                field: 'name',
+                label: 'Container Id',
+                field: 'id',
                 sort: 'asc',
                 width: 150
             },
             {
-                label: 'Position',
-                field: 'position',
+                label: 'Number of items',
+                field: 'number',
                 sort: 'asc',
-                width: 270
+                width: 100
             },
             {
-                label: 'Office',
-                field: 'office',
+                label: 'Manufacturer Name',
+                field: 'manufacturer',
                 sort: 'asc',
                 width: 200
             },
             {
-                label: 'Age',
-                field: 'age',
+                label: 'Item Details',
+                field: 'items',
                 sort: 'asc',
-                width: 100
+                width: 300
             },
             {
-                label: 'Start date',
-                field: 'date',
+                label: 'Address',
+                field: 'address',
                 sort: 'asc',
-                width: 150
+                width: 200
             },
             {
-                label: 'Salary',
-                field: 'salary',
+                label: 'Status',
+                field: 'status',
                 sort: 'asc',
-                width: 100
+                width: 200
             }
         ],
         rows: [
             {
-                name: 'Tiger Nixon',
-                position: 'System Architect',
-                office: 'Edinburgh',
-                age: '61',
-                date: '2011/04/25',
-                salary: '$320'
+                id: 'C10M10',
+                number: '2',
+                manufacturer: 'Lorem',
+                items: 'Lorem Ipsum',
+                address: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+                // status: <MDBBtn color="blue" size="sm">More Info</MDBBtn>
             },
             {
-                name: 'Garrett Winters',
-                position: 'Accountant',
-                office: 'Tokyo',
-                age: '63',
-                date: '2011/07/25',
-                salary: '$170'
+                id: 'C20M20',
+                number: '3',
+                manufacturer: 'Lorem',
+                items: 'Lorem Ipsum',
+                address: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+                // status: <MDBBtn color="blue" size="sm">More Info</MDBBtn>
             },
             {
-                name: 'Ashton Cox',
-                position: 'Junior Technical Author',
-                office: 'San Francisco',
-                age: '66',
-                date: '2009/01/12',
-                salary: '$86'
+                id: 'C30M30',
+                number: '1',
+                manufacturer: 'Lorem',
+                items: 'Lorem Ipsum',
+                address: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+                // status: <MDBBtn color="blue" size="sm">More Info</MDBBtn>
             },
             {
-                name: 'Cedric Kelly',
-                position: 'Senior Javascript Developer',
-                office: 'Edinburgh',
-                age: '22',
-                date: '2012/03/29',
-                salary: '$433'
+                id: 'C40M40',
+                number: '6',
+                manufacturer: 'Lorem',
+                items: 'Lorem Ipsum',
+                address: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+                // status: <MDBBtn color="blue" size="sm">More Info</MDBBtn>
             },
             {
-                name: 'Airi Satou',
-                position: 'Accountant',
-                office: 'Tokyo',
-                age: '33',
-                date: '2008/11/28',
-                salary: '$162'
-            }
+                id: 'C50M50',
+                number: '5',
+                manufacturer: 'Lorem',
+                items: 'Lorem Ipsum',
+                address: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+                // status: <MDBBtn color="blue" size="sm">More Info</MDBBtn>
+            },
         ]
     };
 
     return (
-        <div className="container pt-5 pb-5">
-            <MDBDataTable
-                striped
-                bordered
-                small
-                data={data}
-            />
-        </div>
+        <div className="container pt-5 pb-5" >
+            <MDBTable btn>
+                <MDBDataTable
+                    striped
+                    bordered
+                    small
+                    data={data}
+                />
+            </MDBTable>
+        </div >
     );
 }
+
 
 export default DatatablePage;

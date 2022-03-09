@@ -9,6 +9,12 @@ import Contact from "./components/Homepage/Contact";
 import Footer from "./components/Homepage/Footer";
 import StatsData from "./components/ProjectView/StatsData";
 import Table from "./components/ProjectView/Table";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 import Sensors from "./components/sensorData";
 
@@ -78,8 +84,8 @@ class App extends Component {
         <About />
         <Features />
         <Contact />
-        <StatsData />
         <Table />
+        <StatsData />
         <Footer />
       </div>
     );
