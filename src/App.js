@@ -16,6 +16,8 @@ import Table from "./components/ProjectView/Table";
 //   Link
 // } from "react-router-dom";
 
+import Sensors from "./components/sensorData";
+
 import Amplify, { PubSub } from "aws-amplify";
 import { AWSIoTProvider } from "@aws-amplify/pubsub/lib/Providers";
 
@@ -34,16 +36,48 @@ Amplify.addPluggable(
   })
 );
 
-Amplify.PubSub.subscribe("esp32/counter").subscribe({
-  next: (data) => console.log("Message received", data),
-  error: (error) => console.error(error),
-  close: () => console.log("Done"),
-});
+// Amplify.PubSub.subscribe("esp32/counter").subscribe({
+//   next: (data) => console.log("Message received", data),
+//   error: (error) => console.error(error),
+//   close: () => console.log("Done"),
+// });
+let lat = <Sensors name="latitude"/>
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sensorMsg: '',
+    };
+  }
+  componentDidMount() {
+    Amplify.PubSub.subscribe("esp32/pub").subscribe({
+      next: (data) => {
+        try {
+          this.setState({ sensorMsg: data.value });
+        } catch (error) {
+          console.log("Error, are you sending the correct data?");
+        }
+      },
+      error: (error) => console.error(error),
+      close: () => console.log("Done"),
+    });
+  }
+
   render() {
-    console.log(process.env);
+   // console.log(process.env);
+   //console.log(this.state.sensorMsg)
+    console.log(this.state.sensorMsg.temprature)
+    console.log(this.state.sensorMsg.humidity)
+    console.log(lat)
+
     return (
       <div className="App">
+      {lat}
+        {/* <p>{this.state.sensorMsg.humidity}</p>
+        <p>{this.state.sensorMsg.temprature}</p>
+        <p>{this.state.sensorMsg.longitude}</p>
+        <p>{this.state.sensorMsg.latitude}</p> */}
+
         <Header />
         <Carousel />
         <Statistics />

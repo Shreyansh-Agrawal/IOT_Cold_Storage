@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './projectview.css'
-// import { Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import Map from '../Maps/Map'
+import Sensors from '../sensorData';
 export default class Stats_data extends Component {
     // constructor(props) {
     //     super(props);
@@ -15,6 +16,7 @@ export default class Stats_data extends Component {
     //     legendPosition: 'right',
     //     location: 'City'
     // }
+
     render() {
         return (
             <div className="container mt-5">
@@ -26,6 +28,7 @@ export default class Stats_data extends Component {
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Temperature</span>
                                 <div className="py-3">
+                                <Sensors name="temprature" unit="°F"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
@@ -38,8 +41,8 @@ export default class Stats_data extends Component {
                                                 display: this.props.displayLegend,
                                                 position: this.props.legendPosition
                                             }
-                                        }}
-                                    /> */}
+                                        }} 
+                                    />*/}
                                 </div>
 
                             </div>
@@ -52,6 +55,7 @@ export default class Stats_data extends Component {
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Humidity</span>
                                 <div className="py-3">
+                                <Sensors name="humidity" unit="%"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
@@ -74,7 +78,7 @@ export default class Stats_data extends Component {
                             <div className="card-body">
                                 <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-air-quality-weather-app-inipagistudio-mixed-inipagistudio.png" />
                                 <span className="card-title pl-3 fs-4 fw-bold">Air Quality</span>
-                                <div className="py-3">
+                                <div className="py-3">Air!
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
