@@ -28,7 +28,7 @@ export default class Stats_data extends Component {
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Temperature</span>
                                 <div className="py-3">
-                                <Sensors name="temprature"/>
+                                <Sensors name="temprature" unit="°F"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{
@@ -55,7 +55,7 @@ export default class Stats_data extends Component {
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Humidity</span>
                                 <div className="py-3">
-                                <Sensors name="humidity"/>
+                                <Sensors name="humidity" unit="%"/>
                                     {/* <Line
                                         data={this.state.chartData}
                                         options={{

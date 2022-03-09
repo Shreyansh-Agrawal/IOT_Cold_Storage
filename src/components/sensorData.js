@@ -25,7 +25,7 @@ class Sensors extends Component {
     };
   }
   componentDidMount() {
-    Amplify.PubSub.subscribe("esp32/pub").subscribe({
+    Amplify.PubSub.subscribe("esp32/counter").subscribe({
       next: (data) => {
         try {
           this.setState({ sensorMsg: data.value });
@@ -45,7 +45,7 @@ class Sensors extends Component {
 
     return (
       <div className="Sensor">
-        {sensorData}
+        {sensorData}{ this.props.unit }
       </div>
     );
   }
