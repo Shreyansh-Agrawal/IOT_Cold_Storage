@@ -10,32 +10,14 @@ export default class Carousel extends Component {
                 <div className="carousel-inner" role="listbox">
                     <div className="carousel-item active">
                         <div className="view">
-                            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).webp" alt="First slide" />
-                        </div>
-                        <div className="container">
-                            <div className="carousel-txt-overlay">
-                                {/* <h1 className="textsemibold">Lorem</h1> */}
-                                <h1 className="display-4 textsemibold white-text pb-3">LOREM IPSUM !<br />LOREM IPSUM !</h1>
-                                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
-                                <a className="btn btn-blue textbold "  role="button">Explore More</a>
-                            </div>
-
+                            <img className="d-block w-100" src="pic4.jpg" alt="First slide" />
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className="view">
-                            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).webp" alt="Second slide" />
+                            <img className="d-block w-100" src="pic2.jpg" alt="Second slide" />
                         </div>
-                        <div className="carousel-txt-overlay">
-                            {/* <h1 className="textsemibold">Lorem</h1> */}
-                            <h1 className="display-4 textsemibold white-text pb-3">LOREM IPSUM !<br />LOREM IPSUM !</h1>
-                            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
-                            <a className="btn btn-blue textbold " href='#!' role="button">Explore More</a>
-                        </div>
-
                     </div>
-
-
                     <a className="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="sr-only">Previous</span>
@@ -47,6 +29,8 @@ export default class Carousel extends Component {
                     {/* <!--/.Controls--> */}
                 </div>
             </div>
+
         )
     }
 }
+

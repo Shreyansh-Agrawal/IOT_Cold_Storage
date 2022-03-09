@@ -22,7 +22,7 @@ export default class Stats_data extends Component {
                     <div className="col-md-6">
                         <div className="card" >
                             <div className="card-body">
-                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-air-quality-weather-app-inipagistudio-mixed-inipagistudio.png" />
+                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-temperature-smart-home-system-inipagistudio-mixed-inipagistudio.png" />
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Temperature</span>
                                 <div className="py-3">
@@ -48,7 +48,7 @@ export default class Stats_data extends Component {
 
                         <div className="card mt-4" >
                             <div className="card-body">
-                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-temperature-smart-home-system-inipagistudio-mixed-inipagistudio.png" />
+                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/000000/external-humidity-weather-app-inipagistudio-mixed-inipagistudio.png" />
 
                                 <span className="card-title pl-3 fs-4 fw-bold">Humidity</span>
                                 <div className="py-3">
@@ -72,7 +72,7 @@ export default class Stats_data extends Component {
 
                         <div className="card mt-4" >
                             <div className="card-body">
-                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-temperature-smart-home-system-inipagistudio-mixed-inipagistudio.png" />
+                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-air-quality-weather-app-inipagistudio-mixed-inipagistudio.png" />
                                 <span className="card-title pl-3 fs-4 fw-bold">Air Quality</span>
                                 <div className="py-3">
                                     {/* <Line
@@ -98,10 +98,10 @@ export default class Stats_data extends Component {
                     <div className="col-md-6">
                         <div className="card" >
                             <div className="card-body">
-                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/56/000000/external-temperature-smart-home-system-inipagistudio-mixed-inipagistudio.png" />
+                                <img alt="" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/000000/external-gps-location-and-navigation-inipagistudio-mixed-inipagistudio.png" />
                                 <span className="card-title fs-4 fw-bold pl-3">GPS Location</span>
                                 <div className="mapouter pt-4" style={{ overflow: "hidden", width: "100%" }}>
-                                        <Map/>
+                                    <Map />
                                 </div>
                             </div>
                         </div>

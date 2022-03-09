@@ -10,17 +10,16 @@ export default class Features extends Component {
                         <div className="col reason_grid line1" >
                             <div className="card-features">
                                 <div className="card-features-body">
-                                    <h5 className="card-features-title pt-4 text-white">Lorem</h5>
-                                    <p className="card-features-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                                    <h5 className="card-features-title text-white pt-4 pb-3">High-Range Sensors</h5>
+                                    <p className="card-features-text">Greater measuring and detection range of sensors. </p>
                                 </div>
                             </div>
                         </div>
                         <div className="col reason_grid line2" style={{ paddingLeft: " 60px" }}>
                             <div className="card-features">
                                 <div className="card-features-body">
-                                <h5 className="card-features-title text-white pt-4">Lorem</h5>
-                                <p className="card-features-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-
+                                <h5 className="card-features-title text-white pt-4 pb-3">Remote Training</h5>
+                                <p className="card-features-text">GPS keeps track of items present in the container. </p>
                                 </div>
                             </div>
                         </div>
@@ -29,16 +28,16 @@ export default class Features extends Component {
                         <div className="col reason_grid line3">
                             <div className="card-features">
                                 <div className="card-features-body pt-5" >
-                                <h5 className="card-features-title text-white pt-4">Lorem</h5>
-                                <p className="card-features-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                                <h5 className="card-features-title text-white pt-4 pb-3">Periodic Monitoring</h5>
+                                <p className="card-features-text">Timely updates about the condition of the container.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col reason_grid line4" style={{ paddingLeft: " 60px" }}>
                             <div className="card-features">
                                 <div className="card-features-body pt-5" >
-                                <h5 className="card-features-title text-white pt-4">Lorem</h5>
-                                <p className="card-features-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                                <h5 className="card-features-title text-white pt-4 pb-3">Fetch Data</h5>
+                                <p className="card-features-text">Data fetched by the remote sensors are shown on the website using AWS.</p>
                                 </div>
                             </div>
                         </div>

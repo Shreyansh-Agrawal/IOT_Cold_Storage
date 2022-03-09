@@ -7,15 +7,15 @@ export default class About extends Component {
 
                 <div className="about-us">
                     <div className="about-img">
-                        <img src="/" className="img-fluid" style={{ borderRadius: "16px" }} />
+                        <img src="pic 1.jpg" className="img-fluid" style={{ borderRadius: "16px" }} />
                     </div>
                     <span>
                         <h3 id="header" className="display-4 textsemibold pt-4 pb-5" style={{ marginLeft: "400px" }}>About the Project</h3>
                     </span>
                     <div className="about-txt d-flex align-content-center flex-wrap">
-                        <h4 className="mb-4 textsemibold text-white">We are a Team .</h4>
-                        <p className="text-white text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, explicabo minima. Explicabo autem molestiae accusamus cupiditate, perferendis quam aperiam, dolore placeat adipisci harum molestias quibusdam fugiat ipsam commodi, soluta tenetur?</p>
-                        <form className="custom-input mt-3 mt-sm-4 mt-md-5" action="">
+                        {/* <h4 className="mb-4 textsemibold text-white">We are a Team .</h4> */}
+                        <p className="text-white text-justify about-content">This device successfully detects temperature, humidity, and air quality within the cold storage container while monitoring its position in real time. The owner may also lock and unlock the device remotely, making it incredibly safe and dependable. Additionally, this  low-cost method makes use of AWS to retrieve data from remote sensors and display it on a website for convenient cold storage container monitoring.</p>
+                        <form className="custom-input" action="">
                             <button type="button" className="custom-button">Click to Learn More!</button>
                         </form>
                     </div>
